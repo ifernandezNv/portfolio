@@ -1,0 +1,473 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  /*
+        Purple: hsl(250, 66%, 75%)
+        Blue: hsl(207, 90%, 72%)
+        Pink: hsl(356, 66%, 75%)
+        Teal: hsl(174, 63%, 62%)
+  */
+  --first-hue: 250;
+  --sat: 66%;
+  --lig: 75%;
+  --second-hue: 219;
+  --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
+  --first-color-alt: hsl(var(--first-hue), var(--sat), 71%); /* -4% */
+  --title-color: hsl(var(--second-hue), 15%, 95%);
+  --text-color: hsl(var(--second-hue), 8%, 75%);
+  --text-color-light: hsl(var(--second-hue), 4%, 55%);
+  --body-color: hsl(var(--second-hue), 48%, 8%);
+  --container-color: hsl(var(--second-hue), 32%, 12%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: 'Poppins', sans-serif;
+  --biggest-font-size: 1.75rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+  --tiny-font-size: .625rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semibold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+/* Responsive typography */
+@media screen and (min-width: 968px) {
+  :root {
+    --biggest-font-size: 2.5rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+  transition: .4s; /* for light mode animation */
+}
+
+h1, h2, h3 {
+  color: var(--title-color);
+  font-weight: var(--font-semibold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+span{
+  color: #fff;
+}
+button{
+  color: #fff;
+}
+/*=============== THEME ===============*/
+.lightmode-activado{
+  background-color: #e8e8e8;
+}
+.negro{
+  color: #000;
+}
+.bacco{
+  background-color: #FFF;
+}
+.color-principal{
+  color: #B4AAEB;
+}
+.sombra{
+  box-shadow: -1rem 5px 1rem 5px #e8e8e8;
+}
+/*========== Variables Light theme ==========*/
+.change-theme{
+  height: 1.2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: .3s ease;
+}
+.change-theme:hover{
+  color: var(--first-color);
+
+}
+body.light-theme{
+  --title-color: hsl(var(--second-hue), 15%, 15%);
+  --text-color: hsl(var(--second-hue), 8%, 35%);
+  --body-color: hsl(var(--second-hue), 100%, 99%);
+  --container-color: #fff;
+}
+
+/*========== 
+    Color changes in some parts of 
+    the website, in light theme
+==========*/
+
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 968px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  gap: 1.25rem;
+}
+[class$="__heading"]{
+  color: #B4AAEB;
+}
+.section {
+  padding: 3rem 0 1rem;
+}
+
+.section__title, 
+.section__subtitle {
+  text-align: center;
+}
+
+.section__title {
+  font-size: var(--h2-font-size);
+  color: var(--first-color);
+  margin-bottom: 2rem;
+}
+
+.section__subtitle {
+  display: block;
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
+}
+
+/*=============== HEADER & NAV===============*/
+.barra{
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+}
+.header__info{
+  text-align: center;
+}
+.header__span{
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.header__heading{
+  margin-bottom: 2rem;
+}
+.header__nav{
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 992px) { 
+  .header__nav{
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+.header__nav__item{
+  padding: .6rem 1.4rem;
+  margin: 1rem;
+  border: 1px solid #B4AAEB;
+  border-radius: .5rem;
+  transition: .3s ease;
+}
+.header__nav__item:hover{
+  background-color: #B4AAEB;
+  color: rgb(37, 34, 34);
+}
+.header__contenido{
+  margin: 2rem 0;
+  text-align: center;
+
+}
+@media (min-width: 992px) { 
+  .header__contenido{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.navegacion{
+  display: flex;
+  flex-direction: column;
+}
+.navegacion__item{
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.navegacion__item-color{ 
+  color: #fff;
+}
+
+.imagen{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.imagen__imagen{
+  max-width: 20rem;
+  height: auto;
+}
+.scroll{
+  display: none;
+}
+@media (min-width: 992px) { 
+  .scroll{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+  }
+}
+.scroll__info{
+  transform: rotate(-90deg);
+}
+/* Active link */
+
+
+/* Change background header */
+
+/* Estilos de la sección "Proyectos" */
+.projects__heading{
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+.projects__info{
+  text-align: center;
+}
+.projects__nav{
+  margin: 1.2rem;
+  display: flex;
+  justify-content: space-around;
+}
+.nav__button{
+  background-color: transparent;
+  padding: .2rem 1rem;
+  border-radius: .5rem;
+  border: none;
+  transition: .4s ease;
+}
+.nav__button-active{
+  background-color: #B4AAEB;
+  color: rgb(37, 34, 34);
+}
+.projects__grid{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+  margin-bottom: 3rem;
+}
+@media (min-width: 992px) { 
+  .projects__grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.project{
+  background-color: var(--container-color);
+  padding: 1rem;
+  border-radius: 1rem; 
+  height: 20rem;
+  transition: all .4s ease;
+}
+.project__img{
+  max-width: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.project__imagen{
+  height: 15rem;
+  border-radius: .5rem;
+}
+.project__content{
+  padding: .5rem;
+}
+.project:hover{
+ transform: scale(1.1); 
+}
+.project__heading{
+  font-size: var(--normal-font-size);
+}
+.project__link{
+  color: var(--first-color);
+  margin-right: 1rem;
+}
+.project__link:last-of-type{
+  margin-right: 0;
+}
+
+
+/*=============== BUTTONS ===============*/
+
+
+/*=============== ABOUT ===============*/
+
+
+/*=============== SKILLS ===============*/
+.skills{
+  text-align: center;
+}
+.skills__grid{
+  margin: 2rem;
+  display: grid;
+  gap: 2rem;
+}
+@media (min-width: 992px) { 
+  .skills__grid{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.skill{
+  background-color: var(--container-color);
+  padding: 1rem;
+  border-radius: 1rem; 
+  height: 20rem;
+}
+.frontend__heading{
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+.frontend__list{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.tecnologia{
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.tecnologia__logo{
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #B4AAEB;
+}
+.tecnologia__name{
+  color: #B4AAEB;
+  font-size: 1.2rem;
+}
+.tecnologia__logo-logo{
+  color: #B4AAEB;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.blandas__heading{
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+.habilidad{
+  margin-bottom: 1rem;
+}
+.habilidad:last-of-type{
+  margin-bottom: 0;
+}
+.habilidad__name{
+  color: #B4AAEB;
+  font-size: 1.2rem;
+}
+/*=============== ABOUT ME ===============*/
+.about{
+  text-align: center;
+}
+.about__grid{
+  margin: 1.5rem 0;
+}
+@media (min-width: 992px) { 
+  .about__grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+.info__grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+.dato{
+  background-color: var(--container-color);
+  margin-right: 1rem;
+  padding: 1rem;
+  border-radius: .5rem;
+}
+.dato:last-of-type{
+  margin-right: 0;
+}
+.about__desc{
+  text-align: justify;
+  line-height: 2;
+}
+
+/*=============== FOOTER ===============*/
+.footer{
+  background-color: #B4AAEB;
+  padding: 4rem;
+  color: #000;
+  text-align: center;
+}
+.footer__year{
+  color: #000;
+}

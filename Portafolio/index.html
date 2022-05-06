@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="" type="image/x-icon">
+        <link rel="icon" href="./assets/favicon.ico">
+        <link rel="icon" href="./assets/img/favicon-32x32.png">
+        <!--=============== BOXICONS ===============-->
+        
+
+        <!--=============== SWIPER CSS ===============-->
+        <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="./assets/css/styles.css">
+
+        <title> Portafolio </title>
+    </head>
+
+    <body>
+        <!--=============== HEADER ===============-->
+        <header class="header" id="header">
+            <div class="container">
+                <nav class="barra">
+                    <div class="barra__logo">
+                        <a href="#" class="barra__texto">Isaac</a>
+                    </div>
+                    <div class="barra__darkmode">
+                        <a href="#" id="darkmode"><i class="fa-solid fa-moon change-theme"></i></a>
+                    </div>
+                </nav>
+                <div class="header__info">
+                    <p class="header__intro">Hola, soy</p>
+                    <span class="header__span">Isaac Fernández</span>
+                    <h1 class="header__heading">Desarrollador de Software</h1>
+                    <div class="header__nav">
+                        <a href="./assets/pdf/Isaac-Fernández-Navarro.pdf" download class="header__nav__item">Descargar CV</a>
+                        <a href="#projects" class="header__nav__item">Proyectos</a>
+                    </div>
+                </div>
+                <div class="header__contenido">
+                    <nav class="navegacion">
+                        <a href="https://github.com/ifernandezNv" target="_blank" noreferrer><i class="fa-brands fa-github navegacion__item"></i></a>
+                        <a href="https://www.linkedin.com/in/isaac-fern%C3%A1ndez-navarro-b41870215/" target="_blank" no referrer><i class="fa-brands fa-linkedin navegacion__item"></i></a>
+                    </nav>
+
+                    <div class="imagen">
+                        <img src="./assets/img/blob.svg" alt="imagen de ejemplo" class="imagen__imagen">
+                    </div>
+
+                    <div class="scroll">
+                        <a href="#projects" class="scroll__info">Scroll Down</a>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+
+        <!--=============== MAIN ===============-->
+        <main id="projects" class="container">
+            <p class="projects__info">Mi Portafolio</p>
+            <h2 class="projects__heading">Proyectos Recientes</h2>
+            <nav class="projects__nav">
+                <button class="nav__button nav__button-active" data-filter="all">Todos</button>
+                <button class="nav__button" data-filter=".web">Web</button>
+                <button class="nav__button" data-filter=".design">Diseño</button>
+            </nav>
+            <div class="projects__grid">
+                <div class="project mix web">
+                    <div class="project__img">
+                        <img class="project__imagen" src="./assets/img/pagina web.jpg" alt="Imagen proyecto de página web "> 
+                    </div>
+                    <div class="project__content">
+                        <h3 class="project__heading">Portafolio</h3>
+                        <a href="https://github.com/ifernandezNv/portfolio" class="project__link" >Ver repo</a>
+                    </div>
+                </div> <!-- Fin de proyecto -->
+
+                <div class="project mix design">
+                    <div class="project__img">
+                        <img class="project__imagen" src="./assets/img/aureos ui.png" alt="Imagen project de página web">
+                    </div>
+                    <div class="project__content">
+                        <h3 class="project__heading">Diseño de UI/UX</h3>
+                        <a href="https://www.figma.com/file/mjiebHa0QIDfU2oIjy3ns3/%C3%81ureos?node-id=0%3A1" target="_blank" no referrer class="project__link">Visitar Sitio</a>
+                    </div>
+                </div> <!-- Fin de project -->
+                
+                <div class="project mix design">
+                    <div class="project__img">
+                        <img class="project__imagen" src="./assets/img/itmaps design.png" alt="Imagen project de página web">
+                    </div>
+                    <div class="project__content">
+                        <h3 class="project__heading">Diseño de UI/UX</h3>
+                        <a href="https://www.figma.com/file/EQJ4XK0nhNEEmxBXdhspkB/ItMaps?node-id=0%3A1" target="_blank" no referrer class="project__link">Visitar Sitio</a>
+                    </div>
+                </div> <!-- Fin de project -->
+
+                <div class="project mix web">
+                    <div class="project__img">
+                        <img class="project__imagen" src="./assets/img/pwa.png" alt="Imagen proyecto de página web">
+                    </div>
+                    <div class="project__content">
+                        <h3 class="project__heading">PWA</h3>
+                        <a href="https://luminous-lebkuchen-e01917.netlify.app"  class="project__link" target="_blank" no referrer>Visitar Sitio</a>
+                        <a href="https://github.com/ifernandezNv/itmaps"  class="project__link" target="_blank" no referrer>Ver repo</a>
+                    </div>
+                </div> <!-- Fin de project -->
+            </div>
+        </main>
+
+         <!--=============== HOME ===============-->
+         <section class="skills section container" id="skills">
+            <p class="skills__text">Mis Habilidades</p>
+            <h2 class="skills__heading">Mi Experiencia</h2>
+            <div class="skills__grid">
+                <div class="frontend skill">
+                    <h3 class="frontend__heading">Desarrollador de Software</h3>
+                    <div class="frontend__list">
+                        <div class="tecnologia">
+                            <div class="tecnologia__logo">
+                                <i class="fa-thin fa-badge-check tecnologia__logo-logo"></i>
+                            </div>
+                            
+                            <div class="tecnologia__contenido">
+                                <h4 class="tecnologia__name">HMTL</h4>
+                                <p class="tecnologia__xp">3 años</p>
+                            </div>
+                        </div> <!-- Fin de la tecnología -->
+
+                        <div class="tecnologia">
+                            <div class="tecnologia__logo">
+                                <i class="fa-thin fa-badge-check tecnologia__logo-logo"></i>
+                            </div>
+                            
+                            <div class="tecnologia__contenido">
+                                <h4 class="tecnologia__name">CSS</h4>
+                                <p class="tecnologia__xp">3 años</p>
+                            </div>
+                        </div> <!-- Fin de la tecnología -->
+
+                        <div class="tecnologia">
+                            <div class="tecnologia__logo">
+                                <i class="fa-thin fa-badge-check tecnologia__logo-logo"></i>
+                            </div>
+                            
+                            <div class="tecnologia__contenido">
+                                <h4 class="tecnologia__name">JavaScript</h4>
+                                <p class="tecnologia__xp">2 años</p>
+                            </div>
+                        </div> <!-- Fin de la tecnología -->
+
+                        <div class="tecnologia">
+                            <div class="tecnologia__logo">
+                                <i class="fa-thin fa-badge-check tecnologia__logo-logo"></i>
+                            </div>
+                            
+                            <div class="tecnologia__contenido">
+                                <h4 class="tecnologia__name">Gulp</h4>
+                                <p class="tecnologia__xp">1 año</p>
+                            </div>
+                        </div> <!-- Fin de la tecnología -->
+
+                        <div class="tecnologia">
+                            <div class="tecnologia__logo">
+                                <i class="fa-thin fa-badge-check tecnologia__logo-logo"></i>
+                            </div>
+                            
+                            <div class="tecnologia__contenido">
+                                <h4 class="tecnologia__name">SASS</h4>
+                                <p class="tecnologia__xp">1 año</p>
+                            </div>
+                        </div> <!-- Fin de la tecnología -->
+
+                        <div class="tecnologia">
+                            <div class="tecnologia__logo">
+                                <i class="fa-thin fa-badge-check tecnologia__logo-logo"></i>
+                            </div>
+                            
+                            <div class="tecnologia__contenido">
+                                <h4 class="tecnologia__name">MySQL</h4>
+                                <p class="tecnologia__xp">3 años</p>
+                            </div>
+                        </div> <!-- Fin de la tecnología -->
+                    </div>
+                </div>
+
+                <div class="blandas skill">
+                    <h3 class="blandas__heading">Habilidades Blandas</h3>
+                    <div class="habilidades">
+                        <div class="habilidad">
+                            <div class="habilidad__contenido">
+                                <p class="habilidad__name">Pasión  por enseñar</p>
+                            </div>
+                        </div> <!-- Fin de la habilidad -->
+
+                        <div class="habilidad">
+                            <div class="habilidad__contenido">
+                                <p class="habilidad__name">Paciencia</p>
+                            </div>
+                        </div> <!-- Fin de la habilidad -->
+
+                        <div class="habilidad">
+                            <div class="habilidad__contenido">
+                                <p class="habilidad__name">Escucha Activo</p>
+                            </div>
+                        </div> <!-- Fin de la habilidad -->
+
+                        <div class="habilidad">
+                            <div class="habilidad__contenido">
+                                <p class="habilidad__name">Empatía</p>
+                            </div>
+                        </div> <!-- Fin de la habilidad -->
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        
+        <!--=============== ABOUT ===============-->
+        <section class="about section" id="about">
+            <div class="container">
+                <p class="about__text">Información Extra</p>
+                <h2 class="about__heading">Acerca de mi</h2>
+                <div class="about__grid">
+                    <div class="about__image">
+                        <img src="./assets/img/desarrollo.png" alt="imagen de ejemplo">
+                    </div>
+                    <div class="about__info">
+                        <div class="info__grid">
+                            <div class="dato">
+                                <h3 class="dato__heading">Experiencia</h3>
+                                <p class="dato__texto">2 años de experiencia</p>
+                            </div>
+                            <div class="dato">
+                                <h3 class="dato__heading">Proyectos</h3>
+                                <p class="dato__texto">Más de 10 proyectos finalizados</p>
+                            </div>
+                        </div>
+                        <p class="about__desc">Soy un desarrollador de software mayormente orientado al frontend, he desarrollado paginas web y elaborado interfaces UI/UX</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--=============== FOOTER ===============-->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__contenido">
+                    <p class="footer__copy">Todos los derechos reservados <span class="footer__year"></span> &copy;</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://kit.fontawesome.com/e9cdd90a16.js" crossorigin="anonymous"></script>
+
+        <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+        <!--=============== MIXITUP FILTER ===============-->
+        <script src="./assets/js/mixitup.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="./assets/js/main.js"></script>
+        
+    </body>
+</html>
